@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeyBlade X-Pert Terminal</title>
+    <!-- Tailwind via CDN è ok per test veloci, ma in produzione sarebbe meglio installarlo. 
+         Per ora lasciamolo così che funziona. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,19 +52,12 @@
         pointer-events: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
-  }
-}
-</script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
+
+    <!-- QUESTA È LA RIGA FONDAMENTALE CHE MANCAVA -->
+    <!-- Dice a Vite: "Ehi, il codice React inizia qui!" -->
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
