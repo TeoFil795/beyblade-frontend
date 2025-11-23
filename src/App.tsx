@@ -5,7 +5,7 @@ import { ChatMessage, AppState, BeyCombo } from './types';
 // import { askGemini } from './services/geminiService'; // NON SERVE PIÙ
 
 // Definisci l'URL del tuo backend Render qui!
-const BACKEND_URL = "https://beyblade-brain.onrender.com/"; 
+const BACKEND_URL = "https://beyblade-brain.onrender.com"; 
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
